@@ -14,7 +14,7 @@ function loadImageFromURL(url, callback) {
 }
 
 function generatePriceBreakdown() {
-    const imageUrl = document.getElementById("logo2").src;
+    const imageUrl = document.getElementById("TruSpan1").src;
     loadImageFromURL(imageUrl, function (logoBase64) {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
@@ -31,7 +31,7 @@ function generatePriceBreakdown() {
         const phoneNumber = document.getElementById("phoneNumber").value;
         const address = document.getElementById("address").value;
 
-        const companyAddress = "Hidden Enterprises Ltd.\n52181 Talbot Line,\nRR1 Aylmer, ON\nN5H 2R1";
+        const companyAddress = "TruSpan Trusses Ltd.\n789 Maple Crescent,\nVancouver, BC\nV5K 0A1";
         const addressBoxX = 37;
         const addressBoxY = 60;
         const addressBoxWidth = 40;
@@ -261,7 +261,7 @@ doc.line(totalsBoxX, totalsBoxY + lineHeight * 2, totalsBoxX + totalsBoxWidth, t
         doc.setFont("helvetica");
         doc.text("GST/HST NO.", gstHstLabelX, gstHstLabelY);
         doc.setFont("helvetica", "normal");
-        doc.text("756682902", gstHstLabelX, gstHstLabelY + 5);
+        doc.text("12345 6789 RT0001", gstHstLabelX, gstHstLabelY + 5);
 
         const verseBoxX = 75;
         const verseBoxY = 242;
